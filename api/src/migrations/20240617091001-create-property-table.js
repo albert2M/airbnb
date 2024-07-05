@@ -6,84 +6,79 @@ module.exports = {
     await queryInterface.createTable('properties', {
       id: {
         type: Sequelize.INTEGER,
-        primaryKey: true,
         autoIncrement: true,
+        primaryKey: true,
         allowNull: false
       },
       hostId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       hostSince: {
         type: Sequelize.DATEONLY,
-        allowNull: false
+        allowNull: true
       },
       hostName: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       hostLocation: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       neighburhood: {
         type: Sequelize.STRING,
-        allowNull: false
-      },
+        allowNull: true
+      },      
       roomType: {
         type: Sequelize.STRING,
-        allowNull: false
-      },
+        allowNull: true
+      },      
       bedrooms: {
         type: Sequelize.INTEGER,
-        allowNull: false
-      },
+        allowNull: true
+      },      
       beds: {
         type: Sequelize.INTEGER,
-        allowNull: false
-      },
+        allowNull: true
+      },      
       numberOfReviews: {
         type: Sequelize.INTEGER,
-        allowNull: false
-      },
+        allowNull: true
+      },      
       availability30: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       availability60: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       availability90: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       availability365: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       price: {
         type: Sequelize.DECIMAL,
-        allowNull: false
+        allowNull: true
       },
       createdAt: {
-        type: Sequelize.DATE,
-        allowNull: false
+        type: Sequelize.DATE
       },
       updatedAt: {
-        type: Sequelize.DATE,
-        allowNull: false
+        type: Sequelize.DATE
       },
       deletedAt: {
         type: Sequelize.DATE
       }
     })
-    
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('properties')
   }
 }
-
-// para lanzar o borrar ablas "migraciones": https://sequelize.org/docs/v6/other-topics/migrations/

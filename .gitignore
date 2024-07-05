@@ -1,4 +1,7 @@
-/api/node_modules
-/api/package-lock.json
-/api/src/config/config.json
-/api/.env
+api/package-lock.json
+api/node_modules
+api/src/config/config.json
+api/.env
+client/.env
+client/package-lock.json
+client/node_modules/

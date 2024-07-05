@@ -3,7 +3,8 @@ const Property = sequelizeDb.Property
 const Op = sequelizeDb.Sequelize.Op
 
 exports.create = (req, res) => {
-  Property.create(req.body).then(async data => {
+  console.log(req.body)
+  Property.bulkCreate(req.body).then(async data => {
     res.status(200).send(data)
   }).catch(err => {
     if (err.errors) {
